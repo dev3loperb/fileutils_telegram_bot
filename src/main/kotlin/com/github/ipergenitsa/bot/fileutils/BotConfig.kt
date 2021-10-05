@@ -1,3 +1,3 @@
-package org.telegram.bot.fileutilsbot
+package com.github.ipergenitsa.bot.fileutils
 
 data class BotSecurityConfig(val token: String)

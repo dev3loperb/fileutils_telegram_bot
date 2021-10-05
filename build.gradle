@@ -5,7 +5,7 @@ plugins {
     id 'java'
 }
 
-group 'org.telegram.bot'
+group 'com.github.ipergenitsa'
 version '1.0-SNAPSHOT'
 
 java.sourceCompatibility = JavaVersion.VERSION_11

@@ -1,4 +1,4 @@
-package org.telegram.bot.fileutilsbot
+package com.github.ipergenitsa.bot.fileutils
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

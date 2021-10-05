@@ -1,4 +1,4 @@
-package org.telegram.bot.fileutilsbot
+package com.github.ipergenitsa.bot.fileutils
 
 import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory

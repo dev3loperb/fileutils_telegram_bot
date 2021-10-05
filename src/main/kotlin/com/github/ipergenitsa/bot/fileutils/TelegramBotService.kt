@@ -1,4 +1,4 @@
-package org.telegram.bot.fileutilsbot
+package com.github.ipergenitsa.bot.fileutils
 
 import org.springframework.stereotype.Service
 import org.telegram.telegrambots.meta.TelegramBotsApi
