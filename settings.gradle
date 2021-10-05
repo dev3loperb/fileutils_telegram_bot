@@ -1,0 +1,3 @@
+rootProject.name = 'fileutils_bot'
+include 'file-compression'
+include 'file-converter'
