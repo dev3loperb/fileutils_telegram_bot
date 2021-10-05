@@ -1,5 +1,6 @@
 package org.telegram.bot.fileutilsbot
 
+import org.springframework.stereotype.Component
 import org.telegram.telegrambots.bots.TelegramLongPollingBot
 import org.telegram.telegrambots.meta.api.methods.GetFile
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage
@@ -8,6 +9,7 @@ import org.telegram.telegrambots.meta.api.objects.Update
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException
 
 
+@Component
 class FileCompressionBot(private val botSecurityConfig: BotSecurityConfig) : TelegramLongPollingBot() {
     override fun getBotUsername(): String {
         return "compression bot"
@@ -24,13 +26,9 @@ class FileCompressionBot(private val botSecurityConfig: BotSecurityConfig) : Tel
         val message = update.takeIf { it.hasMessage() }?.message
         val document = message?.takeIf { it.hasDocument() }?.document
         document?.let {
-            val gggFile = GetFile(it.fileId)
-            val executeGetFile = execute(gggFile)
-
             val response = SendMessage().apply {
                 chatId = message.chatId.toString()
-                message.text = "Your file is ready"
-                message.document = Document()
+                text = "Your file is ready"
             }
             try {
                 execute(response) // Call method to send the message
