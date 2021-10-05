@@ -1,5 +1,6 @@
 package com.github.ipergenitsa.bot.fileutils
 
+import com.github.ipergenitsa.bot.compression.ZipCompression
 import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory
 import org.springframework.context.annotation.Bean
@@ -17,4 +18,7 @@ open class ApplicationConfiguration {
 
     @Bean
     open fun parseBotSecurityConfig(config: Config) = BotSecurityConfig(config.getString("token"))
+
+    @Bean
+    open fun compression() = ZipCompression()
 }
