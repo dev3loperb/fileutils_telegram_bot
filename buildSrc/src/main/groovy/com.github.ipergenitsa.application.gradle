@@ -1,5 +1,5 @@
 plugins {
-    id("com.github.ipergenitsa.java-common-conventions")
+    id 'com.github.ipergenitsa.java-common-conventions'
 
-    application
+    id 'application'
 }
