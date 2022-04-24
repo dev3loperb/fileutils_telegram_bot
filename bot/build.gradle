@@ -1,5 +1,6 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+//    id 'com.github.ipergenitsa.application'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.32'
     id 'org.springframework.boot' version "2.5.5"
     id 'io.spring.dependency-management' version "1.0.11.RELEASE"
     id 'java'
@@ -11,7 +12,6 @@ version '1.0-SNAPSHOT'
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
-    mavenCentral()
     mavenCentral()
 }
 
