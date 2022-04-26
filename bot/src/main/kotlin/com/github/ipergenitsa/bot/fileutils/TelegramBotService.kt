@@ -10,11 +10,7 @@ import org.telegram.telegrambots.meta.generics.BotSession
 @Service
 class TelegramBotService(telegramBotsApi: TelegramBotsApi, fileCompressionBot: FileCompressionBot): DisposableBean {
 
-    private val botSession: BotSession
-
-    init {
-        botSession = telegramBotsApi.registerBot(fileCompressionBot)
-    }
+    private val botSession: BotSession = telegramBotsApi.registerBot(fileCompressionBot)
 
     override fun destroy() {
         log.info("Stopping The Bot...")
